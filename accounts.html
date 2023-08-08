@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accounts</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+</head>
+<body class="fade-in">
+<center><h1>Bank Accounts</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Accountnumber</th>
+            <th>Balance</th>
+        </tr>
+        {% for account in accounts %}
+        <tr>
+            <td>{{ account[0] }}</td>
+            <td>{{ account[1] }}</td>
+            <td>{{ account[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>

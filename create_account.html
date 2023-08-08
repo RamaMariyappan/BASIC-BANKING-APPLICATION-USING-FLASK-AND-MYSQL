@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	
+</head>
+</head>
+<body class="fade-in">
+    <center><h1>Create a New Account</h1>
+    <form method="post" action="/create_account">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="balance">Initial Balance:</label><br>
+        <input type="number" id="balance" name="balance" step="0.01" required>
+        <br>
+		<label for="Accountnumber">Accountnumber:</label><br>
+        <input type="number" id="account_number" name="Accountnumber" step="0.01" required><br>
+		
+        <input type="submit" value="Create Account">
+    </form>
+</center>
+</body>
+</html>
